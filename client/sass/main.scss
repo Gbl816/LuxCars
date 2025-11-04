@@ -1,0 +1,14 @@
+// Base styles
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/typography';
+
+// Components
+@import 'components/buttons';
+@import 'components/forms';
+@import 'components/navigation';
+
+// Pages
+@import 'pages/home';
+@import 'pages/auth';
+@import 'pages/dashboard';
