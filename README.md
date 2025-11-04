@@ -1,90 +1,64 @@
-# LuxCars Project
+# Projeto LuxCars
 
-A full-stack TypeScript application for luxury car management.
+Uma aplicação full-stack em TypeScript para gerenciamento de carros de luxo.
 
-## Project Structure
+## Tecnologias Utilizadas
 
-```
-luxcars-project/
-├─ server/           # Backend Node.js/Express server
-│  ├─ src/
-│  │  ├─ controllers/
-│  │  ├─ models/
-│  │  ├─ routes/
-│  │  ├─ middleware/
-│  │  └─ server.ts
-│  ├─ package.json
-│  ├─ tsconfig.json
-│  └─ .env.example
-├─ client/          # Frontend React application
-│  ├─ public/
-│  ├─ src/
-│  │  ├─ components/
-│  │  ├─ pages/
-│  │  ├─ store/
-│  │  └─ index.tsx
-│  ├─ package.json
-│  ├─ tsconfig.json
-│  └─ sass/
-```
+### Backend:
+- Node.js
+- Express
+- TypeScript
+- MongoDB
+- Autenticação JWT
 
-## Getting Started
+### Frontend:
+- React
+- Redux Toolkit
+- TypeScript
+- SASS
+- Vite
 
-### Backend Setup
+## Como Iniciar
 
-1. Navigate to the server directory:
+### Configuração do Backend
+
+1. Navegue até a pasta do servidor:
    ```bash
    cd server
    ```
 
-2. Install dependencies:
+2. Instale as dependências:
    ```bash
    npm install
    ```
 
-3. Create a .env file based on .env.example:
+3. Crie um arquivo .env baseado no .env.example:
    ```bash
    cp .env.example .env
    ```
 
-4. Start the development server:
+4. Inicie o servidor de desenvolvimento:
    ```bash
    npm run dev
    ```
 
-### Frontend Setup
+### Configuração do Frontend
 
-1. Navigate to the client directory:
+1. Navegue até a pasta do cliente:
    ```bash
    cd client
    ```
 
-2. Install dependencies:
+2. Instale as dependências:
    ```bash
    npm install
    ```
 
-3. Start the development server:
+3. Inicie o servidor de desenvolvimento:
    ```bash
    npm start
    ```
 
-## Technologies Used
-
-- Backend:
-  - Node.js
-  - Express
-  - TypeScript
-  - MongoDB
-  - JWT Authentication
-
-- Frontend:
-  - React
-  - Redux Toolkit
-  - TypeScript
-  - SASS
-  - Vite
-
-## License
+## Licença
 
 MIT
