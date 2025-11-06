@@ -4,7 +4,6 @@ import auth, { AuthRequest } from '../middleware/auth';
 
 const router = Router();
 
-// Listar carros
 router.get('/', async (req: Request, res: Response) => {
   try {
     const cars = await Car.find().sort({ createdAt: -1 });
@@ -14,7 +13,6 @@ router.get('/', async (req: Request, res: Response) => {
   }
 });
 
-// Criar carro (protegido)
 router.post('/', auth, async (req: AuthRequest, res: Response) => {
   try {
     const { brand, model, year, price, description } = req.body;
