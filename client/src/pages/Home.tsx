@@ -24,7 +24,7 @@ export default function Home() {
       <section className="car-grid">
         {loading && <p>Carregando...</p>}
         {items.map((car: any, i: number) => (
-          <CarCard key={i} brand={car.brand} model={car.model} image={car.images?.[0]} />
+          <CarCard key={i} _id={car._id} brand={car.brand} model={car.model} image={car.images?.[0]} />
         ))}
       </section>
     </>
