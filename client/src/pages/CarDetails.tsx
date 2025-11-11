@@ -32,12 +32,15 @@ export default function CarDetails() {
   return (
     <div>
       <Header />
-      <main style={{ padding: '24px 60px' }}>
+      <main className="car-details">
         <h2>
           {car.brand} {car.model}
         </h2>
-        <p>{car.description}</p>
-        <p>
+
+        <img src={`http://localhost:4000${car.images?.[0]}`} className="car-details-img" alt={`${car.brand} ${car.model}`} />
+
+        <p className="desc">{car.description}</p>
+        <p className="info">
           Ano: {car.year} • Preço: R$ {car.price ? car.price.toLocaleString() : '—'}
         </p>
       </main>

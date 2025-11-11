@@ -12,7 +12,7 @@ interface CarCardProps {
 export default function CarCard({ image, brand, model, _id }: CarCardProps) {
   return (
     <Link to={`/cars/${_id}`} className="car-card">
-      <img src={image} alt={model} />
+      <img src={`http://localhost:4000${image}`} alt={model} />
       <h3>{brand}</h3>
       <p>{model}</p>
     </Link>

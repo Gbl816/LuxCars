@@ -1,23 +1,13 @@
 .car-details {
-  padding: 60px;
+  padding: 80px;
+  max-width: 1000px;
+  margin: auto;
   text-align: center;
 }
 
 .car-details-img {
-  width: 80%;
-  max-width: 900px;
-  border-radius: 14px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 0 30px #000;
   margin-bottom: 30px;
-}
-
-.desc {
-  opacity: 0.8;
-  margin-top: 12px;
-  font-size: 18px;
-}
-
-.info {
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: 500;
 }
