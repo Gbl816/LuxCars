@@ -9,8 +9,27 @@ export default function Admin() {
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+  const [preview, setPreview] = useState("");
 
   const token = localStorage.getItem("token");
+
+  function handleFile(e: any) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    axios.post("http://localhost:4000/api/upload", formData, {
+      headers: { "Content-Type": "multipart/form-data" }
+    })
+    .then(res => {
+      const url = `http://localhost:4000${res.data.imageUrl}`;
+      setImage(url);
+      setPreview(url);
+    })
+    .catch(() => alert("Erro ao fazer upload da imagem ❌"));
+  }
 
   function handleSubmit(e: any) {
     e.preventDefault();
@@ -26,7 +45,7 @@ export default function Admin() {
     })
     .then(() => {
       alert("Carro cadastrado com sucesso ✅");
-      setBrand(""); setModel(""); setYear(""); setPrice(""); setDescription(""); setImage("");
+      setBrand(""); setModel(""); setYear(""); setPrice(""); setDescription(""); setImage(""); setPreview("");
     })
     .catch(() => alert("Erro ao cadastrar ❌"));
   }
@@ -41,7 +60,8 @@ export default function Admin() {
           <input placeholder="Modelo" value={model} onChange={e => setModel(e.target.value)} />
           <input placeholder="Ano" value={year} onChange={e => setYear(e.target.value)} />
           <input placeholder="Preço" value={price} onChange={e => setPrice(e.target.value)} />
-          <input placeholder="URL da Imagem" value={image} onChange={e => setImage(e.target.value)} />
+          <input type="file" accept="image/*" onChange={handleFile} />
+          {preview && <img src={preview} className="preview" alt="Preview" />}
           <textarea placeholder="Descrição" value={description} onChange={e => setDescription(e.target.value)} />
           <button type="submit">Cadastrar</button>
         </form>
