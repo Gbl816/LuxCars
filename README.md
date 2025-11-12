@@ -30,7 +30,7 @@ O sistema permite:
 
 ### 1️⃣ Clonar o repositório
 ```bash
-git clone https://github.com/seuusuario/luxcars.git
+git clone https://github.com/Gbl816/luxcars.git
 
 2️⃣ Instalar dependências
 cd server
