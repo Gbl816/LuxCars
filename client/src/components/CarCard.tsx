@@ -13,9 +13,20 @@ interface CarCardProps {
 export default function CarCard({ image, brand, model, _id }: CarCardProps) {
   return (
     <Link to={`/car/${_id}`} className="car-card">
-      {image && <img src={assetUrl(image)} alt={model} />}
-      <h3>{brand}</h3>
-      <p>{model}</p>
+      <div className="car-card-image">
+        {image && (
+          <img 
+            src={assetUrl(image)} 
+            alt={`${brand} ${model}`}
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+      </div>
+      <div className="car-info">
+        <h3>{brand}</h3>
+        <p>{model}</p>
+      </div>
     </Link>
   );
 }

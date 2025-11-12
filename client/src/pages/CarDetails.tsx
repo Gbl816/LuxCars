@@ -39,7 +39,13 @@ export default function CarDetails() {
         </h2>
 
         {car.images?.[0] && (
-          <img src={assetUrl(car.images[0])} className="car-details-img" alt={`${car.brand} ${car.model}`} />
+          <img 
+            src={assetUrl(car.images[0])} 
+            className="car-details-img" 
+            alt={`${car.brand} ${car.model}`}
+            loading="eager"
+            decoding="async"
+          />
         )}
 
         <p className="desc">{car.description}</p>

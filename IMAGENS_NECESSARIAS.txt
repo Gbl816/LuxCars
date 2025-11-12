@@ -1,0 +1,47 @@
+﻿ LISTA DE IMAGENS NECESSÁRIAS PARA O LUXCARS
+==============================================
+
+ JÁ EXISTENTES (10 imagens):
+1. aventador.jpg
+2. bugatti-chiron.jpg
+3. ferrari-f8.jpg
+4. ferrari-sf90.jpg
+5. huracan.jpg
+6. mclaren-720s.jpg
+7. mclaren-p1.jpg
+8. porsche-911.jpg
+9. porsche-gt3.jpg
+10. r8.jpg
+
+ NOVAS IMAGENS NECESSÁRIAS (20 imagens):
+11. lamborghini-urus.jpg
+12. ferrari-812.jpg
+13. ferrari-roma.jpg
+14. porsche-taycan.jpg
+15. porsche-panamera.jpg
+16. mclaren-artura.jpg
+17. mclaren-765lt.jpg
+18. aston-db12.jpg
+19. aston-dbs.jpg
+20. bentley-continental.jpg
+21. bentley-bentayga.jpg
+22. rolls-phantom.jpg
+23. rolls-cullinan.jpg
+24. amg-gt-black.jpg
+25. amg-one.jpg
+26. pagani-huayra.jpg
+27. koenigsegg-jesko.jpg
+28. maserati-mc20.jpg
+29. lotus-emira.jpg
+30. lexus-lc500.jpg
+
+ ONDE COLOCAR AS IMAGENS:
+- Coloque todas na pasta: C:\LuxCars\server\uploads\
+
+ PADRÃO DE NOMENCLATURA:
+- Tudo em minúsculas
+- Marca + hífen + modelo
+- Sem espaços
+- Extensão: .jpg
+- Exemplo: bentley-continental.jpg, rolls-phantom.jpg
+

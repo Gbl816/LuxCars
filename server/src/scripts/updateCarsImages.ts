@@ -4,7 +4,6 @@ import Car from '../models/Car';
 
 dotenv.config();
 
-// Map based on brand + model keywords
 function getImageForCar(brand: string, model: string): string | null {
   const combined = `${brand} ${model}`.toLowerCase();
   
