@@ -1,11 +1,12 @@
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
+import { Car } from '../types';
+import { api, assetUrl } from '../api';
 import Header from '../components/Header';
 
 export default function CarDetails() {
   const { id } = useParams();
-  const [car, setCar] = useState<any | null>(null);
+  const [car, setCar] = useState<Car | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -13,8 +14,8 @@ export default function CarDetails() {
     if (!id) return;
     setLoading(true);
     setError(null);
-    axios
-      .get(`http://localhost:4000/api/cars/${id}`)
+    api
+      .get(`/cars/${id}`)
       .then((res) => {
         setCar(res.data);
       })
@@ -37,7 +38,9 @@ export default function CarDetails() {
           {car.brand} {car.model}
         </h2>
 
-        <img src={`http://localhost:4000${car.images?.[0]}`} className="car-details-img" alt={`${car.brand} ${car.model}`} />
+        {car.images?.[0] && (
+          <img src={assetUrl(car.images[0])} className="car-details-img" alt={`${car.brand} ${car.model}`} />
+        )}
 
         <p className="desc">{car.description}</p>
         <p className="info">

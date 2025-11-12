@@ -1,64 +1,57 @@
-# Projeto LuxCars
+# LuxCars 🚗💨  
 
-Uma aplicação full-stack em TypeScript para gerenciamento de carros de luxo.
+**LuxCars** é uma aplicação web full-stack inspirada no design da **Apple Store**, voltada para exibir **carros de luxo e supercarros** como Ferrari, Lamborghini, McLaren, Porsche, Bugatti e outros.
 
-## Tecnologias Utilizadas
+O sistema permite:
+- Cadastro e login de usuários com autenticação JWT
+- CRUD completo de carros (apenas usuários autenticados)
+- Interface moderna e responsiva com tema escuro premium
+- Backend em Node.js + Express + MongoDB
+- Frontend em React + Redux + TypeScript + Sass
 
-### Backend:
-- Node.js
-- Express
-- TypeScript
-- MongoDB
-- Autenticação JWT
+---
 
-### Frontend:
-- React
-- Redux Toolkit
-- TypeScript
-- SASS
-- Vite
+## 🧱 Tecnologias Utilizadas
 
-## Como Iniciar
+### 🔹 Frontend
+- React + TypeScript  
+- Redux Toolkit  
+- Axios  
+- Sass (SCSS)  
 
-### Configuração do Backend
+### 🔹 Backend
+- Node.js + Express  
+- MongoDB + Mongoose  
+- JWT (JSON Web Token)  
 
-1. Navegue até a pasta do servidor:
-   ```bash
-   cd server
-   ```
+---
 
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
+## 🚀 Como Rodar o Projeto
 
-3. Crie um arquivo .env baseado no .env.example:
-   ```bash
-   cp .env.example .env
-   ```
+### 1️⃣ Clonar o repositório
+```bash
+git clone https://github.com/seuusuario/luxcars.git
 
-4. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
+2️⃣ Instalar dependências
+cd server
+npm install
 
-### Configuração do Frontend
+cd ../client
+npm install
 
-1. Navegue até a pasta do cliente:
-   ```bash
-   cd client
-   ```
+3️⃣ Configurar variáveis de ambiente
 
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
+Crie o arquivo .env na pasta server:
 
-3. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm start
-   ```
+MONGO_URI=seu_link_mongodb
+JWT_SECRET=sua_chave_secreta
+PORT=4000
 
-## Licença
+4️⃣ Rodar o backend
+cd server
+npm run dev
 
-MIT
+5️⃣ Rodar o frontend
+cd client
+npm start
+```

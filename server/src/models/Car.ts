@@ -6,6 +6,7 @@ export interface ICar {
   year: number;
   price: number;
   description?: string;
+  images?: string[];
   createdBy?: Types.ObjectId;
 }
 
@@ -15,6 +16,7 @@ const carSchema = new Schema({
   year: { type: Number, required: true },
   price: { type: Number, required: true },
   description: { type: String },
+  images: { type: [String], default: [] },
   createdBy: { type: Schema.Types.ObjectId, ref: 'User' }
 }, { timestamps: true });
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import { api, assetUrl } from "../api";
 import Header from "../components/Header";
 
 export default function Admin() {
@@ -20,11 +20,11 @@ export default function Admin() {
     const formData = new FormData();
     formData.append("image", file);
 
-    axios.post("http://localhost:4000/api/upload", formData, {
+  api.post("/upload", formData, {
       headers: { "Content-Type": "multipart/form-data" }
     })
     .then(res => {
-      const url = `http://localhost:4000${res.data.imageUrl}`;
+      const url = assetUrl(res.data.imageUrl);
       setImage(url);
       setPreview(url);
     })
@@ -33,7 +33,7 @@ export default function Admin() {
 
   function handleSubmit(e: any) {
     e.preventDefault();
-    axios.post("http://localhost:4000/api/cars", {
+  api.post("/cars", {
       brand,
       model,
       year: Number(year),

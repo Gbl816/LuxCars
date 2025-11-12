@@ -1,0 +1,11 @@
+export interface Car {
+  _id?: string;
+  brand: string;
+  model: string;
+  year: number;
+  price: number;
+  description?: string;
+  images?: string[];
+  createdAt?: string;
+  updatedAt?: string;
+}

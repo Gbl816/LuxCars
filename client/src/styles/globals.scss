@@ -30,5 +30,7 @@ button:hover {
   background: #ffffff30;
 }
 
+@import "./layout.scss";
+@import "./car-card.scss";
 @import "./car-details.scss";
 @import "./admin.scss";

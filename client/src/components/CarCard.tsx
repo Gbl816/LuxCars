@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { assetUrl } from '../api';
 import './../styles/car-card.scss';
 
 interface CarCardProps {
@@ -11,8 +12,8 @@ interface CarCardProps {
 
 export default function CarCard({ image, brand, model, _id }: CarCardProps) {
   return (
-    <Link to={`/cars/${_id}`} className="car-card">
-      <img src={`http://localhost:4000${image}`} alt={model} />
+    <Link to={`/car/${_id}`} className="car-card">
+      {image && <img src={assetUrl(image)} alt={model} />}
       <h3>{brand}</h3>
       <p>{model}</p>
     </Link>

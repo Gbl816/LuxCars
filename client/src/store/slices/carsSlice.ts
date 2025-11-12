@@ -1,17 +1,18 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { api } from "../../api";
+import type { Car } from "../../types";
 
 export const fetchCars = createAsyncThunk("cars/fetchCars", async () => {
-  const response = await axios.get("http://localhost:4000/api/cars");
+  const response = await api.get("/cars");
   return response.data;
 });
 
 const carsSlice = createSlice({
   name: "cars",
   initialState: {
-    items: [],
+    items: [] as Car[],
     loading: false,
-  } as { items: any[]; loading: boolean },
+  },
   reducers: {},
   extraReducers: (builder) => {
     builder
